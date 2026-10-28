@@ -1,0 +1,7 @@
+{
+  "name": "puzzle-39-mega-menu",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

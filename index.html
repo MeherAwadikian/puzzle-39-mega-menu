@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forge Studio — Mega Menu (hover-persistent, multi-column)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#">◆ Forge Studio</a>
+
+      <ul class="nav-list" id="nav-list">
+        <li class="nav-item" data-menu="products">
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="panel-products">
+            Products <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="mega-panel" id="panel-products" role="region" aria-label="Products">
+            <div class="mega-col">
+              <h3>Build</h3>
+              <a href="#"><strong>Design System</strong><span>Tokens, components, docs</span></a>
+              <a href="#"><strong>Motion Kit</strong><span>Reusable animation primitives</span></a>
+              <a href="#"><strong>Page Builder</strong><span>Drag-and-drop sections</span></a>
+            </div>
+            <div class="mega-col">
+              <h3>Ship</h3>
+              <a href="#"><strong>Deploy Pipeline</strong><span>Preview + prod in one flow</span></a>
+              <a href="#"><strong>Edge Cache</strong><span>Global, instant invalidation</span></a>
+              <a href="#"><strong>Analytics</strong><span>Core Web Vitals in real time</span></a>
+            </div>
+            <div class="mega-col mega-feature">
+              <h3>Featured</h3>
+              <a href="#" class="feature-card">
+                <strong>Forge v3 is here</strong>
+                <span>Server components, 40% smaller bundles, new motion engine.</span>
+                <em>Read the announcement →</em>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item" data-menu="solutions">
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="panel-solutions">
+            Solutions <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="mega-panel" id="panel-solutions" role="region" aria-label="Solutions">
+            <div class="mega-col">
+              <h3>By team</h3>
+              <a href="#"><strong>Startups</strong><span>Launch fast, stay lean</span></a>
+              <a href="#"><strong>Agencies</strong><span>Reusable client kits</span></a>
+              <a href="#"><strong>Enterprise</strong><span>SSO, audit, SLAs</span></a>
+            </div>
+            <div class="mega-col">
+              <h3>By need</h3>
+              <a href="#"><strong>Landing pages</strong><span>High-converting, fast</span></a>
+              <a href="#"><strong>Dashboards</strong><span>Data-dense UIs</span></a>
+              <a href="#"><strong>Docs sites</strong><span>Searchable, structured</span></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-trigger" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-trigger" href="#">Docs</a>
+        </li>
+      </ul>
+
+      <a class="nav-cta" href="#">Start a project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hover-persistent mega menu</h1>
+      <p>Hover (or focus) <strong>Products</strong> or <strong>Solutions</strong>. The multi-column panel opens, and
+         crucially it <em>stays open</em> while you move the cursor diagonally from the trigger down into the panel —
+         a short close-delay plus a "hover intent" bridge prevents the flicker that naive <code>:hover</code>-only
+         menus suffer. Keyboard users can Tab to a trigger and press Enter/Space or Arrow&nbsp;Down to open it, Escape to close.</p>
+      <p class="muted">Status line below is driven by the menu JS so the open/close behaviour is observable.</p>
+      <p id="status" class="status">menu: idle</p>
+    </section>
+  </main>
+
+  <script src="menu.js"></script>
+</body>
+</html>
